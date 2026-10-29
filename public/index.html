@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="description" content="Demonstração independente de um portal de auditorias ocupacionais com dados fictícios."/>
+  <title>Audit Portal — Demonstração</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+  <link rel="stylesheet" href="/style.css"/><script src="/app.js" defer></script>
+</head>
+<body>
+  <section id="login-page" class="login-page" aria-label="Escolha do perfil demonstrativo">
+    <div class="login-side">
+      <div class="top-mark"><span class="logo-icon">↗</span><span>audit<span class="mark-light">/portal</span></span></div>
+      <div class="login-headline"><div class="eyebrow"><span class="eyebrow-dot"></span> PORTFOLIO · INDEPENDENT DEMO</div><h1>Auditorias mais claras.<br/><em>Decisões mais rápidas.</em></h1><p>Uma demonstração de portal para acompanhamento de auditorias ocupacionais, indicadores e tratativas.</p></div>
+      <div class="login-graphic"><div class="graphic-top"><span>VISÃO CONSOLIDADA</span><span class="graphic-dots">•••</span></div><div class="graphic-number">94,8<span>%</span></div><div class="graphic-caption">Exemplo ilustrativo · Indicador fictício</div><div class="mini-bars"><i style="height:41%"></i><i style="height:67%"></i><i style="height:48%"></i><i style="height:86%"></i><i style="height:63%"></i><i style="height:98%"></i><i style="height:77%"></i><i style="height:90%"></i><i style="height:71%"></i><i style="height:96%"></i></div></div>
+      <p class="side-footer">Desenvolvido como demonstração independente. Sem acesso a sistemas reais.</p>
+    </div>
+    <div class="login-main"><div class="login-content"><div class="login-badge">AMBIENTE DEMONSTRATIVO</div><h2>Explore o portal</h2><p class="muted">Selecione um perfil fictício para visualizar dados e fluxos de diferentes organizações.</p><div id="profiles" class="profile-list" aria-label="Perfis de demonstração"></div><button id="login-btn" class="btn btn-primary btn-full" disabled>Entrar na demonstração <span>→</span></button><div class="login-note"><span>ⓘ</span> Este acesso não utiliza senhas reais. Os perfis e dados são simulados e não representam clientes ou operações de produção.</div></div></div>
+  </section>
+  <div id="workspace" class="workspace" hidden>
+    <aside class="sidebar">
+      <div class="brand"><span class="logo-icon">↗</span><span>audit<span class="mark-light">/portal</span></span></div>
+      <div class="sidebar-group-label">ESPAÇO DE TRABALHO</div>
+      <nav id="navigation" class="navigation" aria-label="Navegação principal">
+        <button type="button" class="nav-item active" data-tab="overview"><span>◫</span> Visão geral</button>
+        <button type="button" class="nav-item" data-tab="audits"><span>▤</span> Auditorias</button>
+        <button type="button" class="nav-item" data-tab="issues"><span>◇</span> Inconsistências</button>
+        <button type="button" class="nav-item" data-tab="treatments"><span>◎</span> Tratativas</button>
+        <button type="button" class="nav-item" data-tab="performance"><span>▥</span> Desempenho</button>
+        <button type="button" class="nav-item" data-tab="base"><span>▦</span> Base demonstrativa</button>
+      </nav>
+      <div class="sidebar-bottom"><div class="demo-chip"><span class="pulse"></span> DADOS 100% FICTÍCIOS</div><div class="account"><div id="account-avatar" class="account-avatar">ON</div><div class="account-text"><strong id="account-name">Organização</strong><small>Perfil de demonstração</small></div></div><button id="logout-btn" class="logout" type="button">↪ Trocar perfil</button></div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><button class="mobile-menu" id="mobile-menu" aria-label="Abrir menu">☰</button><div class="breadcrumbs">PORTAL DE AUDITORIAS <span>/</span> <strong id="crumb">Visão geral</strong></div><div class="top-actions"><span class="header-live"><span></span> Ambiente de teste</span><div id="header-avatar" class="top-avatar">ON</div></div></header>
+      <div class="page-content"><div class="page-heading"><div><div id="heading-kicker" class="page-kicker">PAINEL DE ACOMPANHAMENTO</div><h1 id="page-title">Visão geral</h1><p id="page-subtitle" class="subtitle">Indicadores consolidados de auditoria do período selecionado.</p></div><div class="heading-actions"><button type="button" class="btn btn-outline" id="export-btn">↓ Exportar CSV</button><button type="button" class="btn btn-primary" id="refresh-btn">↻ Atualizar</button></div></div>
+      <section class="filters" aria-label="Filtros"><div class="field"><label for="from-date">Data inicial</label><input id="from-date" type="date"/></div><div class="field"><label for="to-date">Data final</label><input id="to-date" type="date"/></div><div class="field"><label for="company">Empresa</label><select id="company"><option value="Todas">Todas as empresas</option></select></div><div class="field" id="unit-field" hidden><label for="unit">Unidade</label><select id="unit"><option value="Todas">Todas as unidades</option></select></div><button id="clear-btn" class="clear-btn" title="Limpar filtros" type="button">Limpar filtros</button></section>
+      <div id="page-body" class="page-body" aria-live="polite"><div class="loading">Carregando dados de demonstração...</div></div>
+      <footer class="main-footer">INDEPENDENT PORTFOLIO DEMO <span>·</span> Dados ilustrativos <span>·</span> Sem integração de produção</footer>
+      </div>
+    </main>
+  </div>
+  <div id="modal-root" class="modal-root" hidden></div>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
