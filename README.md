@@ -109,8 +109,4 @@ The accompanying [`samples/fictional-audit-base.csv`](samples/fictional-audit-ba
 
 ---
 
-## 👩‍💻 Author
-
-**Isabelle Ramires** · [GitHub @Isabelleramires](https://github.com/Isabelleramires)
-
-*Independent demonstration of technical concepts explored in a professional context — not an academic assignment or an official operational system.*
+*Independent demonstration of technical concepts explored in a professional context, not an academic assignment or an official operational system.*
